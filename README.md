@@ -3,7 +3,7 @@ StopWatch is a web app that automatically goes through curated content from YouT
 
 If positive feelings are detected in the viewer, then the current video in the playlist continues playing. If it reaches the end, then the most similar video found on YouTube to the video is played next. If negative emotions are detected, then the current video is skipped, and the next video in the randomized playlist of 50 videos (generated from keywords specified by the user) is played.
 
-![Alt text](/screenshots/stopwtach-site-demo-1.png?raw=true "Optional Title")
+![alt tag](https://raw.githubusercontent.com/jddunn/stopwatch-master/blob/master/screenshots/stopwatch-site-demo-1.png)
 
 ![Alt text](/screenshots/stopwtach-site-demo-2.png?raw=true "Optional Title")
 
