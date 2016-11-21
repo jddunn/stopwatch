@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>		
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>StopWatch - Watch YouTube Intelligently</title>
+        <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- Theme CSS -->
+        <link href="css/grayscale.css" rel="stylesheet">        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+ <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="brand-heading" style = "letter-spacing: 36px; font-size: 4em; padding: 20px; margin-top: 50px;">StopWatch</h1>
+                        <h3 style = "text-align: center; leter-spacing: 3px">Automatically curated content from YouTube based on your emotions in real-time.  </h2>
+                        <p class="intro-text">
+                         A video that makes you happy, surprised, or at the very least content? Then a similar one to it will be played next. If that video makes you sad or disgusted or angry, then it'll skip and a different one in your playlist will automatically play. Watch video content intelligently and lazily.</p>
+                         <p style = "font-size: 1.2em; font-color : rgb(245, 245, 240);">A webcam is required for the site to recognize your facial expressions.<br>If nothing happens when you try building a playlist, it means your specified keywords do not produce enough content (50 videos) for viewing. Try something else.<br><br>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Play Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+             <div class ="col-lg-8 col-lg-offset-2" style = "color: black">
+                <!-- <h2 style = "color: white">Search Videos</h2> -->
+                <form action = '#'>
+                <input type="text" class= "form-control" id="search" style = "width: 40%; height: 50px" placeholder = "What are you looking to watch today?"/>
+                <input type="submit" class = "form-control" style = "width: 30%; height: 50px; font-family: 'Lora', 'Helvetica Neue, Helvetica, Arial, sans-serif;' font-weight: strong;" value="BUILD PLAYLIST"/>
+                </form>
+                <br>
+                <button id="start" class = "btn btn-primary" onclick="onStart()">Start Webcam</button>
+                <button id="stop" class = "btn btn-primary" onclick="onStop()">Stop Webcam</button>
+                <button id="reset" class = "btn btn-primary" onclick="onReset()">Reset Detection</button>
+                <!-- <div id = "search-container" style = "color: white"></div> -->
+                </div>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <div id="video-placeholder">
+                    <!-- <iframe id="youriframe"></iframe> -->
+                    <div id="ytplayer" style = "padding-top: 20px;"></div>
+                    </div>
+            </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+        <h2 style = "color: white; text-align: center; letter-spacing: 9px;">Real-time Facial Analysis</h2>    
+                    <div class="embed-responsive embed-responsive-4x3" id = "affdex_elements" style = "color: white; float: left; width: 50%; height: 25%; display: inline-block">
+         <!-- <div class ="col-lg-6 col-lg-offset-1" > -->
+               <!-- <div id="emojiDraw" style = "display: inline-block; text-align: center; margin-left: 35%%"></div><br><br> -->
+              <div id="results" style="text-align: center; float: right; color: rgb(245, 245, 240); margin-left: 45%; word-wrap:break-word; width: 70%; position: absolute; display: inline-block"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Download Section  -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 style = "letter-spacing: 9px">Download Source Code</h2>
+                    <p>StopWatch is open-source.</p>
+                    <br>Created with the Affectiva and YouTube APIs.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- scripts -->
+    <script src="/vendor/jquery/jquery.js"></script>
+    <!-- Affectiva Emotional Analysis SDK Source -->
+
+    <script src="https://download.affectiva.com/js/3.1/affdex.js"/>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/play_video.js"></script>
+    <script src="js/get_related_video.js"></script>
+    <script src="js/analyze_emotion.js"></script>
+    <script src="js/detect_emotion.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    </body>
+</html>
+
