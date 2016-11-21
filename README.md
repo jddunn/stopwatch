@@ -9,7 +9,7 @@ Flashy ebsite intro
 Trying to find 'Hey Now' Performances by London Grammar..
 ![alt tag](https://github.com/jddunn/stopwatch-master/blob/master/screenshots/stopwatch-site-demo-2.png)
 
-It played Matt & Kim.. Wasn't feeling it, the program picked up negativity..
+It played Matt & Kim.. Wasn't feeling it, the program picked up negativity, and skipped this video..
 ![Alt text](https://github.com/jddunn/stopwatch-master/blob/master/screenshots/stopwatch-site-demo-3.png)
 
 Much more about this one.
