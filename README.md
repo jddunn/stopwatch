@@ -1,3 +1,2 @@
-# viralvideos
-See https://www.youtube.com/watch?v=-vH2eZAM30s for video tutorial on how to use the Youtube Data API V3
-"# stopwatch-master" 
+# StopWatch
+StopWatch is a web app that automatically goes through curated content from YouTube based off of the emotional states detected in the viewer by the webcam, utilizing the Affectiva SDK. Made with Bootstrap and jQuery.
