@@ -5,7 +5,7 @@ If positive feelings are detected in the viewer, then the current video in the p
 
 Replace the blank API Key (API_KEY) with your client API key from Google Developer's Console (with YouTube Data API enabled), and run a HTTP server (python3 -m http.server in cmd in Windows), since the YouTube API needs a server. 
 
-Flashy ebsite intro
+Flashy website intro
 ![alt tag](https://github.com/jddunn/stopwatch-master/blob/master/screenshots/stopwatch-site-demo-1.png)
 
 Trying to find 'Hey Now' Performances by London Grammar..
