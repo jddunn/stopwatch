@@ -2,14 +2,14 @@
 //  Must run a HTTP server and run the web app from local or web server because of Google / YouTube's API
 //  Some original code and comments retained below from FriesFlorian's viralvideos repo: https://github.com/FriesFlorian/ViralVideos
 
-var API_KEY = "";     // INSERT CLIENT API KEY HERE. GET IT FROM GOOGLE DEVELOPER'S CONSOLE, MAKE SURE YOUTUBE DATA API IS ENABLED.
+var API_KEY = "AIzaSyBA5iUfmeJWCmJVw0a6vDk69l8O0jAMz8M";     // INSERT CLIENT API KEY HERE. GET IT FROM GOOGLE DEVELOPER'S CONSOLE, MAKE SURE YOUTUBE DATA API IS ENABLED.
 var videoResultsObj = {}
 var videoResultsList = []
 
 // Code and comments below from Youtube defaults
 // Load the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
-tag.src = "http://www.youtube.com/player_api";
+tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // Replace the 'ytplayer' element with an <iframe> and

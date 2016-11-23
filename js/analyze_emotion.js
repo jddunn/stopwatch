@@ -44,9 +44,10 @@ function detectEmotionsFromCam() {
 	// 		NEGATIVE EMOTIONS
 	// console.log(emotions.anger); 
 	// console.log(emotions.contempt); console.log(emotions.disgust); console.log(emotions.fear); console.log(emotions.sadness);
-	runningPositiveCount = parseFloat(runningPositiveCount) + parseFloat(emotions.joy) + parseFloat(emotions.surprise) + parseFloat(emotions.engagement);
-	runningNegativeCount = parseFloat(runningNegativeCount) + parseFloat(emotions.anger) + parseFloat(emotions.contempt) + 
-	                       parseFloat(emotions.disgust + emotions.sadness) + parseFloat(emotions.fear);
+	runningPositiveCount = ((parseFloat(runningPositiveCount) + parseFloat(emotions.joy) + parseFloat(emotions.surprise) + parseFloat(emotions.engagement))
+	+ parseFloat(emotions.valence));
+	runningNegativeCount = ((parseFloat(runningNegativeCount) + parseFloat(emotions.anger) + parseFloat(emotions.contempt) + 
+	                       parseFloat(emotions.disgust + emotions.sadness) + parseFloat(emotions.fear)) - parseFloat(emotions.valence));
 	// console.log("POSITIVE: " + runningPositiveCount); console.log("NEGATIVE: " + runningNegativeCount);
 	metThreshold();
 }
