@@ -65,7 +65,7 @@ function resetTimersAndValues () {
 
 function metThreshold() {
 	// Returns a new, higher or lower threshold value depending on which threshold was met
-	posNegCountDifference = Math.abs(runningPositiveCount + runningNegativeCount);
+	posNegCountDifference = Math.abs(runningPositiveCount - runningNegativeCount);
 	// console.log("ABSOLUTE VALUE: " + posNegCountDifference);
 	// We do need compound if-statements, since sometimes a surprised expression can be perceived as negative, so we should look for compare to both thresholds.
 	if (posNegCountDifference >= positiveThreshold && posNegCountDifference <= negativeThreshold) {
