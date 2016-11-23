@@ -45,7 +45,7 @@ function detectEmotionsFromCam() {
 	// console.log(emotions.anger); 
 	// console.log(emotions.contempt); console.log(emotions.disgust); console.log(emotions.fear); console.log(emotions.sadness);
 	runningPositiveCount = ((parseFloat(runningPositiveCount) + (parseFloat(emotions.joy) * 1.5) + (parseFloat(emotions.surprise) * 1.5) +
-	           				(parseFloat(emotions.engagement) / 1.5) + parseFloat(emotions.valence)));
+	           				(parseFloat(emotions.engagement) * 1.5) + parseFloat(emotions.valence)));
 	runningNegativeCount = ((parseFloat(runningNegativeCount) + (parseFloat(emotions.anger) * 1.5) + (parseFloat(emotions.contempt) * 1.5) + 
 	                       parseFloat(emotions.disgust * 1.5) + (parseFloat(emotions.sadness) * 1.5) + 
 	                       (parseFloat(emotions.fear) * 1.5) - parseFloat(emotions.valence) / 1.5));
