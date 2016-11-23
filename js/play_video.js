@@ -2,7 +2,7 @@
 //  Must run a HTTP server and run the web app from local or web server because of Google / YouTube's API
 //  Some original code and comments retained below from FriesFlorian's viralvideos repo: https://github.com/FriesFlorian/ViralVideos
 
-var API_KEY = "AIzaSyBA5iUfmeJWCmJVw0a6vDk69l8O0jAMz8M";     // INSERT CLIENT API KEY HERE. GET IT FROM GOOGLE DEVELOPER'S CONSOLE, MAKE SURE YOUTUBE DATA API IS ENABLED.
+var API_KEY = "";     // INSERT CLIENT API KEY HERE. GET IT FROM GOOGLE DEVELOPER'S CONSOLE, MAKE SURE YOUTUBE DATA API IS ENABLED.
 var videoResultsObj = {}
 var videoResultsList = []
 
