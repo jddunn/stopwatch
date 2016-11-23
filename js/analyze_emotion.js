@@ -148,7 +148,7 @@ function skipVideo () {
 	runningNegativeCount = 0;
 	positiveThreshold = 100;
 	// Multiply negative here so it doesn't skip again (ensure threshold isn't to low)
-    negativeThreshold = positiveThreshold * 2.5;
+    negativeThreshold = positiveThreshold * 1.5;
     console.log(vidCount)
 	console.log("VIDEO SKIPPING..");
     // shuffleArray(videoResultsList);
