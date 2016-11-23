@@ -22,7 +22,7 @@ var posNegCountDifference = 0;
 var positiveThreshold = 100;
 //	Let's make negative a higher threshold to start out with, since Affectiva's SDK consistently picks up some neutral expressions as negative. 
 //	There is one more emotion classified as negative too, so this will be set off more likely. Let's make it at least 1.5 times as high as positive threshold.
-var negativeThreshold = positiveThreshold / 2.5;
+var negativeThreshold = positiveThreshold / 1.5;
 var posThresholdMet = false;
 var negThresholdMet = false;
 
@@ -61,7 +61,7 @@ function resetTimersAndValues () {
 	runningPositiveCount = 0;
 	runningNegativeCount = 0;
 	positiveThreshold = 100;
-    negativeThreshold = positiveThreshold / 2.5;
+    negativeThreshold = positiveThreshold / 1.5;
 }
 
 
@@ -134,7 +134,7 @@ function findSimilarVideo () {
 	runningPositiveCount = 0;
 	runningNegativeCount = 0;
 	positiveThreshold = 100;
-    negativeThreshold = positiveThreshold / 2.5;
+    negativeThreshold = positiveThreshold / 1.5;
 	getRelated();
 	// findSimilarVideo() = function(){}; // kill it as soon as it was called
 	return;
@@ -149,7 +149,7 @@ function skipVideo () {
 	runningNegativeCount = 0;
 	positiveThreshold = 100;
 	// Multiply negative here so it doesn't skip again (ensure threshold isn't to low)
-    negativeThreshold = positiveThreshold / 2.5;
+    negativeThreshold = positiveThreshold * 1.5;
     console.log(vidCount)
 	console.log("VIDEO SKIPPING..");
     // shuffleArray(videoResultsList);
