@@ -44,7 +44,7 @@ function detectEmotionsFromCam() {
 	// 		NEGATIVE EMOTIONS
 	// console.log(emotions.anger); 
 	// console.log(emotions.contempt); console.log(emotions.disgust); console.log(emotions.fear); console.log(emotions.sadness);
-	runningPositiveCount = parseFloat(runningPositiveCount) + parseFloat(emotions.joy) + parseFloat(emotions.surprise);
+	runningPositiveCount = parseFloat(runningPositiveCount) + parseFloat(emotions.joy) + parseFloat(emotions.surprise) + parseFloat(emotions.engagement);
 	runningNegativeCount = parseFloat(runningNegativeCount) + parseFloat(emotions.anger) + parseFloat(emotions.contempt) + 
 	                       parseFloat(emotions.disgust + emotions.sadness) + parseFloat(emotions.fear);
 	// console.log("POSITIVE: " + runningPositiveCount); console.log("NEGATIVE: " + runningNegativeCount);
@@ -147,7 +147,7 @@ function skipVideo () {
 	runningNegativeCount = 0;
 	positiveThreshold = 100;
 	// Multiply negative here so it doesn't skip again (ensure threshold isn't to low)
-    negativeThreshold = positiveThreshold * 1.5;
+    negativeThreshold = positiveThreshold * 2.5;
     console.log(vidCount)
 	console.log("VIDEO SKIPPING..");
     // shuffleArray(videoResultsList);
