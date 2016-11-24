@@ -7,8 +7,7 @@
 //  detected, the code will pick from the next item in the original playlist specified by the user.
 
 // As more positive emotions are detected, the negative count is lowered, and goes down even into the negatives (There's timer that resets everything every
-//  30 seconds, which is a pretty decent amount of time to watch an Internet video). So, if the user felt really good about the video at first but was 
-//  revolted by something briefly, the program will not skip the current video.
+//  5 second timer to reset threshold to weed out false positives in emotion recognition
 
 
 var runningPositiveCount = 0;
@@ -26,7 +25,7 @@ var negativeThreshold = positiveThreshold / 1.5;
 var posThresholdMet = false;
 var negThresholdMet = false;
 
-var timerToSet = 20000;
+var timerToSet = 5000;
 
 // Start at 1, because the first video will have already been played.
 var vidCount = 1; 
