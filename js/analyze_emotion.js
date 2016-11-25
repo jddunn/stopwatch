@@ -25,11 +25,7 @@ var negativeThreshold = positiveThreshold / 1.5;
 var posThresholdMet = false;
 var negThresholdMet = false;
 
-<<<<<<< HEAD
-var timerToSet = 7500;
-=======
-var timerToSet = 5000;
->>>>>>> 41badcc7160d620a06ea3421ad49e5eebf448a20
+var timerToSet = 3500;
 
 // Start at 1, because the first video will have already been played.
 var vidCount = 1; 
@@ -47,10 +43,10 @@ function detectEmotionsFromCam() {
 	// 		NEGATIVE EMOTIONS
 	// console.log(emotions.anger); 
 	// console.log(emotions.contempt); console.log(emotions.disgust); console.log(emotions.fear); console.log(emotions.sadness);
-	runningPositiveCount = (parseFloat(runningPositiveCount) + parseFloat(emotions.joy) + parseFloat(emotions.surprise) + parseFloat(emotions.engagement)
+	runningPositiveCount = (parseFloat(runningPositiveCount) + (parseFloat(emotions.joy) * 3.5) + (parseFloat(emotions.surprise) * 3.5) + (parseFloat(emotions.engagement) * 2.5)
 	+ (parseFloat(emotions.valence) * 2.5));
-	runningNegativeCount = (parseFloat(runningNegativeCount) + parseFloat(emotions.anger) + parseFloat(emotions.contempt) + 
-	                       parseFloat(emotions.disgust) + parseFloat(emotions.sadness) + parseFloat(emotions.fear) + parseFloat(emotions.valence) - (Math.sqrt(runningPositiveCount) * 1.5);
+	runningNegativeCount = ((parseFloat(runningNegativeCount) + (parseFloat(emotions.anger) * 2.5) + (parseFloat(emotions.contempt) * 1.5) + 
+	                       (parseFloat(emotions.disgust) * 2.5) + (parseFloat(emotions.sadness) * 2.5) + parseFloat(emotions.fear) + parseFloat(emotions.valence) / 1.5)) - (runningPositiveCount / 1.5);
 	// console.log("POSITIVE: " + runningPositiveCount); console.log("NEGATIVE: " + runningNegativeCount);
 	metThreshold();
 }
