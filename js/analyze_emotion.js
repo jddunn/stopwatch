@@ -7,7 +7,7 @@
 //  detected, the code will pick from the next item in the original playlist specified by the user.
 
 // As more positive emotions are detected, the negative count is lowered, and goes down even into the negatives (There's timer that resets everything every
-//  5 second timer to reset threshold to weed out false positives in emotion recognition
+//  3.5 second timer to reset threshold to weed out false positives in emotion recognition
 
 
 var runningPositiveCount = 0;
@@ -20,7 +20,7 @@ var posNegCountDifference = 0;
 //	Thresholds to change or play similar videos. Will be running toals and reset on timers
 var positiveThreshold = 100;
 //	Let's make negative a higher threshold to start out with, since Affectiva's SDK consistently picks up some neutral expressions as negative. 
-//	There is one more emotion classified as negative too, so this will be set off more likely. Let's make it at least 1.5 times as high as positive threshold.
+//	Since we're subtracting an extrapolated value of the positive count from the negative count, let's make the negative threshold always lower
 var negativeThreshold = positiveThreshold / 1.5;
 var posThresholdMet = false;
 var negThresholdMet = false;
