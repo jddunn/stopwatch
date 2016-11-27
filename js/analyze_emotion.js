@@ -20,7 +20,7 @@ var posNegCountDifference = 0;
 //	Thresholds to change or play similar videos. Will be running toals and reset on timers
 var positiveThreshold = 100;
 //	Let's make negative a higher threshold to start out with, since Affectiva's SDK consistently picks up some neutral expressions as negative. 
-//	There is one more emotion classified as negative too, so this will be set off more likely. Let's make it at least 1.5 times as high as positive threshold.
+//	Since we're subtracting an extrapolated value of the positive count from the negative count, let's make the negative threshold always lower
 var negativeThreshold = positiveThreshold / 1.5;
 var posThresholdMet = false;
 var negThresholdMet = false;
