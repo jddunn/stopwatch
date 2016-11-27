@@ -7,7 +7,7 @@
 //  detected, the code will pick from the next item in the original playlist specified by the user.
 
 // As more positive emotions are detected, the negative count is lowered, and goes down even into the negatives (There's timer that resets everything every
-//  5 second timer to reset threshold to weed out false positives in emotion recognition
+//  3.5 second timer to reset threshold to weed out false positives in emotion recognition
 
 
 var runningPositiveCount = 0;
